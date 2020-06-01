@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
@@ -57,6 +58,10 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                       dec: (InputDecoration(
                         suffix: Text('@st.niituniversity.in'),
                         fillColor: Colors.white.withOpacity(1),
+                        enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10)),
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10)),
                         hintText: 'Email',
                         contentPadding:
                             EdgeInsets.symmetric(horizontal: 10, vertical: 20),
@@ -66,7 +71,13 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                     TextBox_welcomepage(
                       title: 'Password',
                       dec: InputDecoration(
+                        focusColor: Colors.white,
                         hintText: 'Password',
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10)),
                         contentPadding:
                             EdgeInsets.symmetric(horizontal: 10, vertical: 20),
                       ),
@@ -134,7 +145,9 @@ class TextBox_welcomepage extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(top: 12.0, left: 12, right: 12),
       child: Container(
-        color: Colors.white.withOpacity(0.5),
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10),
+            color: Colors.white.withOpacity(0.5)),
         child: TextField(
           obscureText: obs,
           keyboardType: TextInputType.emailAddress,
