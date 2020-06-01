@@ -8,6 +8,13 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  List<String> timet = [
+    'DBMS, lab',
+    'DBMS, lab',
+    'CAO, lecture',
+    'Psychology, tutorial',
+    'DAA, lab'
+  ];
   PageController _controller = PageController(initialPage: 0);
 
   void dispose() {
@@ -18,7 +25,7 @@ class _HomeScreenState extends State<HomeScreen> {
   void initState() {
     super.initState();
 
-    for (var i = 2; i < 6; i++) {
+    for (var i = 0; i <= 4; i++) {
       ttlist.add(
         Padding(
           padding: const EdgeInsets.only(left: 55.0),
@@ -46,7 +53,7 @@ class _HomeScreenState extends State<HomeScreen> {
               Padding(
                 padding: const EdgeInsets.only(left: 8.0),
                 child: Text(
-                  'Period $i',
+                  timet[i],
                   style: TextStyle(
                       color: Colors.black54, fontFamily: 'Montserrat'),
                 ),
@@ -76,7 +83,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 padding: const EdgeInsets.only(left: 8.0),
                 child: Container(
                   child: Text(
-                    'Period 1',
+                    'TimeTable',
                     style: TextStyle(
                         color: Colors.black54, fontFamily: 'Montserrat'),
                   ),
@@ -107,6 +114,7 @@ class _HomeScreenState extends State<HomeScreen> {
   SafeArea HomePage_timeline_layout() {
     return SafeArea(
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -147,6 +155,7 @@ class _HomeScreenState extends State<HomeScreen> {
 SafeArea HomePage_home() {
   return SafeArea(
     child: Column(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: <Widget>[
         Row(
           mainAxisAlignment: MainAxisAlignment.start,
