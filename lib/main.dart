@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'welcome_screen.dart';
 import 'home_screen.dart';
-//import 'home_timeline.dart';
 import 'new_gpa.dart';
+import 'wallet_main.dart';
 
 void main() => runApp(MyApp());
 
@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
       '/welcome': (context) => WelcomeScreen(),
       '/home': (context) => HomeScreen(),
       '/gpa': (context) => GPApage(),
+      '/wallet': (context) => Wallet(),
     });
   }
 }
