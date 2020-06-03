@@ -113,9 +113,18 @@ class _MessMenuState extends State<MessMenu> {
                           },
                           child: Container(
                             decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(8),
-                              color: Colors.lightBlue.withOpacity(0.5),
-                            ),
+                                borderRadius: BorderRadius.circular(8),
+                                gradient: LinearGradient(
+                                    begin: Alignment.topLeft,
+                                    end: Alignment.bottomRight,
+                                    colors: [
+                                      Color(0xFFDE6262),
+                                      Color(0xFFFFB88C),
+                                    ],
+                                    stops: [
+                                      0.1,
+                                      0.8
+                                    ])),
                             width: 320,
                             height: isCollapsed_Lunch ? 70 : 200,
                             child: Column(
@@ -164,9 +173,18 @@ class _MessMenuState extends State<MessMenu> {
                           },
                           child: Container(
                             decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(8),
-                              color: Colors.lightBlue.withOpacity(0.5),
-                            ),
+                                borderRadius: BorderRadius.circular(8),
+                                gradient: LinearGradient(
+                                    begin: Alignment.topLeft,
+                                    end: Alignment.bottomRight,
+                                    colors: [
+                                      Color(0xFFDE6262),
+                                      Color(0xFFFFB88C),
+                                    ],
+                                    stops: [
+                                      0.1,
+                                      0.8
+                                    ])),
                             width: 320,
                             height: isCollapsed_Snacks ? 70 : 200,
                             child: Column(

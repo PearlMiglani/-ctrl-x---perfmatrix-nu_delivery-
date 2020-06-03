@@ -164,7 +164,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 Navigator.pushNamed(context, '/gpa');
               },
               child: Text('GPA Calculator',
-                  style: TextStyle(fontFamily: 'Montserrat', fontSize: 28)),
+                  style: TextStyle(fontFamily: 'Montserrat', fontSize: 25)),
             )
           ],
         ),
